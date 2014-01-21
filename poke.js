@@ -1,5 +1,6 @@
 ﻿// playground for poking on arbitray mongodb backends
-// node poke.js
+// node poke.js // in nitrous.io
+// https://s3ql-70726.use1.nitrousbox.com/  // nitrous.io will proxy port 3000 through SSL
 
 var mongodb = require("mongodb");
 var http = require("http");
