@@ -1,6 +1,8 @@
-﻿var mongodb = require("mongodb");
+﻿// playground for poking arbitray mongodb backends
+
+var mongodb = require("mongodb");
 var http = require("http");
-var corser = require("corser"); // Thank you Alex - this is great :-)!!!
+var corser = require("corser");
 var log = console.log;
 var port = process.env.PORT || 1337;
 log('POSTmongo served at port '+port);
@@ -17,7 +19,7 @@ http.createServer(function (req, res) {
             res.end();
         } else {
             res.writeHead(200);
-            res.end(':-)');
+            res.end('poking');
         }
     });
 }).listen(port);
