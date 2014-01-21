@@ -5,7 +5,7 @@ var mongodb = require("mongodb");
 var http = require("http");
 var corser = require("corser");
 var log = console.log;
-var port = process.env.PORT || 1337;
+var port = process.env.PORT || 3000; // nitrous will proxy it through SSL through this port
 log('POSTmongo served at port '+port);
 
 // Create Corser request listener.
