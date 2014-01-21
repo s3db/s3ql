@@ -1,4 +1,5 @@
-﻿// playground for poking arbitray mongodb backends
+﻿// playground for poking on arbitray mongodb backends
+// node poke.js
 
 var mongodb = require("mongodb");
 var http = require("http");
@@ -19,7 +20,8 @@ http.createServer(function (req, res) {
             res.end();
         } else {
             res.writeHead(200);
-            res.end('poking');
+            res.write('poking mongodb');
+            res.end();
         }
     });
 }).listen(port);
