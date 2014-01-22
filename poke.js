@@ -8,6 +8,7 @@ var corser = require("corser");
 var log = console.log;
 var port = process.env.PORT || 3000; // nitrous will proxy it through SSL through this port
 log('POSTmongo served at port '+port);
+log('service at https://s3ql-70726.use1.nitrousbox.com');
 
 // Create Corser request listener.
 var corserRequestListener = corser.create();
