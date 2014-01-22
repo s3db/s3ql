@@ -23,6 +23,13 @@ http.createServer(function (req, res) {
         } else {
             res.writeHead(200);
             res.write('poking mongodb');
+            res.write('\n');
+            res.write(req.url);
+            var pp = req.url.slice(2).split('&').map(function(xi){return xi.split('=')});
+            var parm={};
+            pp.map(function(xi){parm[xi[0]]=decodeURI(xi[1])});
+            res.write('\nparm=');
+            res.write(JSON.stringify(parm));
             res.end();
         }
     });
